@@ -103,7 +103,7 @@ public class Problem1 {
             
             else
             {
-                System.out.println (outputint);
+                System.out.print (outputint + " ");
                 gonethrough = true;
             }
             
