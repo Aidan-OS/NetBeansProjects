@@ -23,7 +23,7 @@ public class Methods {
         
        System.out.println (reverse ("dog") ); 
        System.out.println (searchAndReplace ("happy", 'p', 'r') );
-       System.out.println (sumOfNumbersBetween (4,7) );
+       System.out.println (sumOfNumbersBetween (2,7) );
        System.out.println (areaCircle (4) );
        drawHappyFace (200, 50);
         
@@ -64,10 +64,19 @@ public class Methods {
     public static int sumOfNumbersBetween (int num1, int num2)
     {
         int sum = 0;
-        
-        for (int i = num1; i <= num2; i++)
+        if (num1 > num2)
         {
-            sum += i;
+            for (int i = num2; i <=  num1; i++)
+            {
+                sum +=i;
+            }
+        }
+        else
+        {
+            for (int i = num1; i <= num2; i++)
+            {
+                sum += i;
+            }
         }
         
         return (sum);
