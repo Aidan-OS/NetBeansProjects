@@ -7,6 +7,7 @@ package methods;
 
 import hsa.Console;
 import java.awt.*;
+import java.io.*;
 
 /**
  *
@@ -18,14 +19,15 @@ public class Methods {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // TODO code application logic here
         
-       System.out.println (reverse ("dog") ); 
-       System.out.println (searchAndReplace ("happy", 'p', 'r') );
-       System.out.println (sumOfNumbersBetween (2,7) );
-       System.out.println (areaCircle (4) );
-       drawHappyFace (200, 50);
+       //System.out.println (reverse ("dog") ); 
+       //System.out.println (searchAndReplace ("happy", 'p', 'r') );
+       //System.out.println (sumOfNumbersBetween (2,7) );
+       //System.out.println (areaCircle (4) );
+       //drawHappyFace (200, 50);
+       HelpingBIlly.billyhelp ();
         
     }
     

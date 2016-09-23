@@ -115,6 +115,7 @@ public class Problem1 {
         }
         
         numbersoutput.close ();
+        
     }
     
 }
