@@ -96,11 +96,119 @@ public class RunTurtle {
         turtle2.setColor (Color.BLUE);
         turtle3.setColor (Color.YELLOW);
         
+        turtle1.setLineWidth (5);
+        turtle2.setLineWidth (5);
+        turtle3.setLineWidth (5);
+        
         for (int i = 0; i < 25; i++)
         {
-            turtle1.setAngle ((int) (Math.random () * (360) ));
-            turtle2.setAngle ((int) (Math.random () * (360) ));
-            turtle3.setAngle ((int) (Math.random () * (360) ));
+            for (int p = 0; p < 3; p++)
+            {
+                int angle = (int) (Math.random () * (3) + 1);
+                switch (angle)
+                {
+                    case 1: 
+                    {
+                        switch (p)
+                        {
+                            case 0:
+                            {
+                                turtle1.setAngle (0);
+                                break;
+                            }
+                            
+                            case 1: 
+                            {
+                                turtle2.setAngle (0);
+                                break;
+                            }
+                            
+                            case 2:
+                            {
+                                turtle3.setAngle (0);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                    
+                    case 2:
+                    {
+                        switch (p)
+                        {
+                            case 0:
+                            {
+                                turtle1.setAngle (90);
+                                break;
+                            }
+                            
+                            case 1: 
+                            {
+                                turtle2.setAngle (90);
+                                break;
+                            }
+                            
+                            case 2:
+                            {
+                                turtle3.setAngle (90);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                    
+                    case 3:
+                    {
+                        switch (p)
+                        {
+                            case 0:
+                            {
+                                turtle1.setAngle (180);
+                                break;
+                            }
+                            
+                            case 1: 
+                            {
+                                turtle2.setAngle (180);
+                                break;
+                            }
+                            
+                            case 2:
+                            {
+                                turtle3.setAngle (180);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                    
+                    case 4:
+                    {
+                        switch (p)
+                        {
+                            case 0:
+                            {
+                                turtle1.setAngle (270);
+                                break;
+                            }
+                            
+                            case 1: 
+                            {
+                                turtle2.setAngle (270);
+                                break;
+                            }
+                            
+                            case 2:
+                            {
+                                turtle3.setAngle (270);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+            
+            }
             
             turtle1.move (5);
             turtle2.move (5);

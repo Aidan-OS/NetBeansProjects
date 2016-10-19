@@ -17,13 +17,12 @@ public class TurtleDash extends Turtle
     public TurtleDash (Console c)
     {
         super (c);
+        dot = true;
     }
     
     @Override
     public void move (int distance)
-    {
-        dot = true;
-        
+    {   
         int newx, newy;
 	double rAngle = (angle * Math.PI) / 180;
 	newx = (int) Math.round (x + Math.cos (rAngle) * distance);
