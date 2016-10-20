@@ -11,19 +11,19 @@ package petsassignment;
  */
 public class Dog extends Pet{
     
-    protected double runSpeed;
+    protected boolean neutered;
     protected double barkVolume;
     
-    public Dog (int numOfLegs, boolean hotBlooded, double runSpeed, double barkVolume)
+    public Dog (int numOfLegs, boolean hotBlooded, boolean neutered, double barkVolume)
     {
         super (numOfLegs, hotBlooded);
-        this.runSpeed = runSpeed;
+        this.neutered = neutered;
         this.barkVolume = barkVolume;
     }
     
-    public void setRunSpeed (double runSpeed)
+    public void setNeutered (boolean neutered)
     {
-        this.runSpeed = runSpeed;
+        this.neutered = neutered;
     }
     
     public void setBarkVolume (double barkVolume)
@@ -31,9 +31,9 @@ public class Dog extends Pet{
         this.barkVolume = barkVolume;
     }
     
-    public double getRunSpeed ()
+    public boolean getNeutered ()
     {
-        return (runSpeed);
+        return (neutered);
     }
     
     public double getBarkVolume ()
@@ -44,7 +44,7 @@ public class Dog extends Pet{
     @Override
     public String toString ()
     {
-        return ("Number of Legs: " + numOfLegs + "\nHot Blooded: " + hotBlooded + "Running Speed: " + runSpeed + "\nBark Volume: " + barkVolume);
+        return ("Number of Legs: " + numOfLegs + "\nHot Blooded: " + hotBlooded + "\nNeutered: " + neutered + "\nBark Volume: " + barkVolume);
     }
     
 }

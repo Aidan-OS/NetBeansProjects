@@ -11,19 +11,19 @@ package petsassignment;
  */
 public class Cat extends Pet{
     
-    protected double runSpeed;
+    protected boolean neutered;
     protected String furType;
     
-    public Cat (int numOfLegs, boolean hotBlooded, double runSpeed, String furType)
+    public Cat (int numOfLegs, boolean hotBlooded, boolean neutered, String furType)
     {
         super (numOfLegs, hotBlooded);
-        this.runSpeed = runSpeed;
+        this.neutered = neutered;
         this.furType = furType;
     }
     
-    public void setRunSpeed (double runSpeed)
+    public void setNeutered (boolean neutered)
     {
-        this.runSpeed = runSpeed;
+        this.neutered = neutered;
     }
     
     public void setFurType (String furType)
@@ -31,9 +31,9 @@ public class Cat extends Pet{
         this.furType = furType;
     }
     
-    public double getRunSpeed ()
+    public boolean getNeutered ()
     {
-        return (runSpeed);
+        return (neutered);
     }
     
     public String getFurType ()
@@ -44,7 +44,7 @@ public class Cat extends Pet{
     @Override
     public String toString ()
     {
-        return ("Number of Legs: " + numOfLegs + "\nHot Blooded: " + hotBlooded + "Run Speed: " + runSpeed + "\nFur Type: " + furType);
+        return ("Number of Legs: " + numOfLegs + "\nHot Blooded: " + hotBlooded + "\nNeutered: " + neutered + "\nFur Type: " + furType);
     }
     
 }

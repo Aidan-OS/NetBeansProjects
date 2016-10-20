@@ -12,19 +12,19 @@ import java.awt.*;
  */
 public class Fish extends Pet{
     
-    protected double swimSpeed;
+    protected double gillEfficiency;
     protected Color scaleColor;
     
-    public Fish (int numOfLegs, boolean hotBlooded, double swimSpeed, Color scaleColor)
+    public Fish (int numOfLegs, boolean hotBlooded, double gillEfficiency, Color scaleColor)
     {
         super (numOfLegs, hotBlooded);
-        this.swimSpeed = swimSpeed;
+        this.gillEfficiency = gillEfficiency;
         this.scaleColor = scaleColor;
     }
     
-    public void setSwimSpeed (double swimSpeed)
+    public void setGillEfficiency (double gillEfficiency)
     {
-        this.swimSpeed = swimSpeed;
+        this.gillEfficiency = gillEfficiency;
     }
     
     public void setScaleColor (Color scaleColor)
@@ -32,9 +32,9 @@ public class Fish extends Pet{
         this.scaleColor = scaleColor;
     }
     
-    public double getSwimSpeed ()
+    public double getGillEfficiency ()
     {
-        return (swimSpeed);
+        return (gillEfficiency);
     }
     
     public Color getScaleColor ()
@@ -45,7 +45,7 @@ public class Fish extends Pet{
     @Override
     public String toString ()
     {
-        return ("Number of Legs: " + numOfLegs + "\nHot Blooded: " + hotBlooded + "Swim Speed: " + swimSpeed + "\nScale Color: " + scaleColor);
+        return ("Number of Legs: " + numOfLegs + "\nHot Blooded: " + hotBlooded + "\nGill Efficiency: " + gillEfficiency + "%\nScale Color: " + scaleColor);
     }
     
 }
