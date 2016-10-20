@@ -14,9 +14,9 @@ public class Cat extends Pet{
     protected boolean neutered;
     protected String furType;
     
-    public Cat (int numOfLegs, boolean hotBlooded, boolean neutered, String furType)
+    public Cat (int numOfLegs, boolean hotBlooded, boolean isItAcceptableToEatThisPetInTodaysSociety, boolean neutered, String furType)
     {
-        super (numOfLegs, hotBlooded);
+        super (numOfLegs, hotBlooded, isItAcceptableToEatThisPetInTodaysSociety);
         this.neutered = neutered;
         this.furType = furType;
     }
@@ -44,7 +44,7 @@ public class Cat extends Pet{
     @Override
     public String toString ()
     {
-        return ("Number of Legs: " + numOfLegs + "\nHot Blooded: " + hotBlooded + "\nNeutered: " + neutered + "\nFur Type: " + furType);
+        return ("Number of Legs: " + numOfLegs + "\nHot Blooded: " + hotBlooded + "\nIs It Acceptable To Eat This Pet In Todays Society: " + isItAcceptableToEatThisPetInTodaysSociety + "\nNeutered: " + neutered + "\nFur Type: " + furType);
     }
     
 }

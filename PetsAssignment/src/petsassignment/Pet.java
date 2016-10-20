@@ -13,11 +13,13 @@ public class Pet {
     
     protected int numOfLegs;
     protected boolean hotBlooded;
+    protected boolean isItAcceptableToEatThisPetInTodaysSociety;
     
-    public Pet (int numOfLegs, boolean hotBlooded)
+    public Pet (int numOfLegs, boolean hotBlooded, boolean isItAcceptableToEatThisPetInTodaysSociety)
     {
         this.numOfLegs = numOfLegs;
         this.hotBlooded = hotBlooded;
+        this.isItAcceptableToEatThisPetInTodaysSociety = isItAcceptableToEatThisPetInTodaysSociety;
     }
     
     public void setLegs (int numOfLegs)
@@ -40,9 +42,19 @@ public class Pet {
         return (hotBlooded);
     }
     
+    public void setIsItAcceptableToEatThisPetInTodaysSociety (boolean isItAcceptableToEatThisPetInTodaysSociety)
+    {
+        this.isItAcceptableToEatThisPetInTodaysSociety = isItAcceptableToEatThisPetInTodaysSociety;
+    }
+    
+    public boolean getIsItAcceptableToEatThisPetInTodaysSociety ()
+    {
+        return (isItAcceptableToEatThisPetInTodaysSociety);
+    }
+    
     @Override
     public String toString ()
     {
-        return ("Number of Legs: " + numOfLegs + "\nHot Blooded: " + hotBlooded);
+        return ("Number of Legs: " + numOfLegs + "\nHot Blooded: " + hotBlooded + "\nIs It Acceptable To Eat This Pet In Todays Society: " + isItAcceptableToEatThisPetInTodaysSociety);
     }
 }

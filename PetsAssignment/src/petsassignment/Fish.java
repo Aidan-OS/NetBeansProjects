@@ -15,9 +15,9 @@ public class Fish extends Pet{
     protected double gillEfficiency;
     protected Color scaleColor;
     
-    public Fish (int numOfLegs, boolean hotBlooded, double gillEfficiency, Color scaleColor)
+    public Fish (int numOfLegs, boolean hotBlooded, boolean isItAcceptableToEatThisPetInTodaysSociety, double gillEfficiency, Color scaleColor)
     {
-        super (numOfLegs, hotBlooded);
+        super (numOfLegs, hotBlooded, isItAcceptableToEatThisPetInTodaysSociety);
         this.gillEfficiency = gillEfficiency;
         this.scaleColor = scaleColor;
     }
@@ -45,7 +45,7 @@ public class Fish extends Pet{
     @Override
     public String toString ()
     {
-        return ("Number of Legs: " + numOfLegs + "\nHot Blooded: " + hotBlooded + "\nGill Efficiency: " + gillEfficiency + "%\nScale Color: " + scaleColor);
+        return ("Number of Legs: " + numOfLegs + "\nHot Blooded: " + hotBlooded + "\nIs It Acceptable To Eat This Pet In Todays Society: " + isItAcceptableToEatThisPetInTodaysSociety + "\nGill Efficiency: " + gillEfficiency + "%\nScale Color: " + scaleColor);
     }
     
 }

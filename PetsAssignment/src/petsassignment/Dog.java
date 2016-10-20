@@ -14,9 +14,9 @@ public class Dog extends Pet{
     protected boolean neutered;
     protected double barkVolume;
     
-    public Dog (int numOfLegs, boolean hotBlooded, boolean neutered, double barkVolume)
+    public Dog (int numOfLegs, boolean hotBlooded, boolean isItAcceptableToEatThisPetInTodaysSociety, boolean neutered, double barkVolume)
     {
-        super (numOfLegs, hotBlooded);
+        super (numOfLegs, hotBlooded, isItAcceptableToEatThisPetInTodaysSociety);
         this.neutered = neutered;
         this.barkVolume = barkVolume;
     }
@@ -44,7 +44,7 @@ public class Dog extends Pet{
     @Override
     public String toString ()
     {
-        return ("Number of Legs: " + numOfLegs + "\nHot Blooded: " + hotBlooded + "\nNeutered: " + neutered + "\nBark Volume: " + barkVolume);
+        return ("Number of Legs: " + numOfLegs + "\nHot Blooded: " + hotBlooded + "\nIs It Acceptable To Eat This Pet In Todays Society: " + isItAcceptableToEatThisPetInTodaysSociety + "\nNeutered: " + neutered + "\nBark Volume: " + barkVolume);
     }
     
 }
