@@ -21,6 +21,7 @@ public class UsePet {
         Fish f = new Fish (0, false, true, 98.5, Color.PINK);
         Dog d = new Dog (4, true, false, true, 5.6);
         
+        
         System.out.println ("Cat");
         System.out.println (c.toString () );
         
