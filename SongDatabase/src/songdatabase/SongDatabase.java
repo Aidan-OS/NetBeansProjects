@@ -22,7 +22,7 @@ public class SongDatabase {
 	
 	String [] [] songList = new String [20] [2];
 	
-	for (int i = 0; i < 20; i++)
+	for (int i = 0; i < songList.length; i++)
 	{
 	    for (int j = 0; j < 2; j++)
 	    {
