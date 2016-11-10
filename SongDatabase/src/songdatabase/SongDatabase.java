@@ -24,11 +24,8 @@ public class SongDatabase {
 	
 	for (int i = 0; i < songList.length; i++)
 	{
-	    for (int j = 0; j < 2; j++)
-	    {
-		songList [i] [j] = fr.readLine().toLowerCase();
-	    }
-	    
+	    songList [i] [0] = fr.readLine().toLowerCase();
+	    songList [i] [1] = fr.readLine().toLowerCase();
 	}
 	fr.close ();
 	
