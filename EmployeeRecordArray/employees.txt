@@ -1,0 +1,41 @@
+10
+Aidan Smith
+001
+30
+50
+Jacob VanVoorst
+007
+25
+30
+Calvin VanVoorst
+008
+20
+25
+Holly Smith
+010
+15
+20
+Jacob Blaney
+002
+28
+40
+Alphonse Elric
+009
+20
+40
+Leone Shamoth
+003
+30
+50
+Rintarou Okabe
+004
+25
+45
+Sora Blank
+005
+25
+35
+Edward Elric
+006
+20
+40
