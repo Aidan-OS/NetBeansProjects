@@ -18,13 +18,30 @@ public class RunEmployeeRecord {
     public static void main(String[] args) throws IOException{
         // TODO code application logic here
         BufferedReader fr = new BufferedReader (new FileReader ("employees.txt") );
+        RandomAccessFile raf = new RandomAccessFile ("employees.bin", "rw");
         
-        Employee [] emp = new Employee [Integer.parseInt (fr.readLine ()) ]; //First thing in file will be a number saying how many employees
+        int numOfEmployees = Integer.parseInt (fr.readLine ());
+        
+        Employee [] emp = new Employee [numOfEmployees]; //First thing in file will be a number saying how many employees
+        
+        raf.writeInt (numOfEmployees);
         
         for (int i = 0; i < emp.length; i++)//Brings in employee Info from file
         {
             emp [i] = new Employee (fr.readLine (), Integer.parseInt (fr.readLine () ), Double.parseDouble(fr.readLine ()), Double.parseDouble(fr.readLine ()));
+            
+            byte [] byteName = new byte [15];
+            emp [i].getName ().getBytes(0, (emp [i].getName ().length ()) - 1, byteName, 0);
+            
+            raf.seek ( (i * 35) + 4);
+            
+            raf.write (byteName);
+            raf.writeInt (emp[i].getEmployeeNumber());
+            raf.writeDouble (emp[i].getHourlyRate());
+            raf.writeDouble (emp[i].getHoursWorked());
         }
+        
+        raf.close();
         
         bubbleSortByEmployeeName (emp);
         

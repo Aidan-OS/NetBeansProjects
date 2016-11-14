@@ -34,7 +34,7 @@ public class Employee {
         this.name = name;
     }
     
-    public int GetEmployeeNumber ()
+    public int getEmployeeNumber ()
     {
         return employeeNumber;
     }
