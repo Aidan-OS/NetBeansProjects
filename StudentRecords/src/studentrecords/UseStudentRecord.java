@@ -44,31 +44,25 @@ public class UseStudentRecord {
             raf.writeDouble (students [i].getAverage());
         }
         
-        raf.close ();
-        
-        RandomAccessFile raf2 = new RandomAccessFile ("StudentRecord.bin", "rw");
-        
         for (int i = 0; i < 26; i++)
         {
-            raf2.seek ((i*40) + 16);
+            raf.seek ((i*40) + 16);
             
             int prepAverage = 0;
             
             for (int j = 0; j < 4; j++)
             {
-                prepAverage += raf2.readInt ();
+                prepAverage += raf.readInt ();
             }
             
             double average = prepAverage / 4.0;
             
-            raf2.seek ((i*40) + 32);
+            raf.seek ((i*40) + 32);
                     
-            raf2.writeDouble (average);  
+            raf.writeDouble (average);  
         }
         
-        raf2.close ();
         
-        RandomAccessFile raf3 = new RandomAccessFile ("StudentRecord.bin", "rw");
         BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
         
         System.out.print ("Please eneter the name you wish to search for: ");
@@ -79,9 +73,9 @@ public class UseStudentRecord {
         
         for (int i = 0; i < 26; i++)
         {
-            raf3.seek (i * 40);
+            raf.seek (i * 40);
             byte [] byteName = new byte [16];
-            raf3.read(byteName);
+            raf.read(byteName);
             
             String name = new String (byteName, 0);
             name = name.toUpperCase();
@@ -96,11 +90,11 @@ public class UseStudentRecord {
         
         if (found)
         {
-            System.out.println ("Mark 1: " + raf3.readInt ());
-            System.out.println ("Mark 2: " + raf3.readInt ());
-            System.out.println ("Mark 3: " + raf3.readInt ());
-            System.out.println ("Mark 4: " + raf3.readInt ());
-            System.out.println ("Average: " + raf3.readDouble ());
+            System.out.println ("Mark 1: " + raf.readInt ());
+            System.out.println ("Mark 2: " + raf.readInt ());
+            System.out.println ("Mark 3: " + raf.readInt ());
+            System.out.println ("Mark 4: " + raf.readInt ());
+            System.out.println ("Average: " + raf.readDouble ());
         }
         
         else
