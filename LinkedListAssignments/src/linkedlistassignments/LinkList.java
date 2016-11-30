@@ -104,19 +104,24 @@ public class LinkList
                 
                 else//Deleting anything else in the list
                 {
-                    for (int i = 0; i < recordNumber - 1; i++)//Finds the record before the one to be removed
+                    LinkEmployeeRecord oneBefore = top;
+                    int i = 0;
+                    while (i != (recordNumber - 1))//Finds the record before the one to be removed
                     {
-                        current = current.getNext ();
+                        oneBefore = oneBefore.getNext ();
+                        i++;
                     }
                     
                     LinkEmployeeRecord oneAfterToBeDeleted = top;
+                    i = 0 ;
                     
-                    for (int i = 0; i <= recordNumber + 1; i++)//Finds Record after one to be removed
+                    while (i != (recordNumber + 1))//Finds Record after one to be removed
                     {
                         oneAfterToBeDeleted = oneAfterToBeDeleted.getNext ();
+                        i++;
                     }
                     
-                    current.setNext (oneAfterToBeDeleted);//Sets the next for the one before to the one after
+                    oneBefore.setNext (oneAfterToBeDeleted);//Sets the next for the one before to the one after
                 }
                 break;
             }
