@@ -1,0 +1,50 @@
+Calgary(AB)
+993.2
+Chicoutimi-Jonquiere(QC)
+156.9
+Edmonton(AB)
+967.2
+Halifax(NS)
+363.2
+Hamilton(ON)
+686.9
+Kitchener(ON)
+438
+London(ON)
+427.3
+Montreal(QC)
+3548.8
+Oshawa(ON)
+310
+Ottawa-Hull(ON-QC)
+1128.9
+Quebec(QC)
+697.8
+Regina(SK)
+197
+Saint John(NB)
+127
+Saskatoon(SK)
+231.8
+Sherbooke(QC)
+156.5
+St. Catharines-Niagara(ON)
+392.3
+St. John’s(NF)
+177.2
+Sudbury(ON)
+155.9
+Thunder Bay(ON)
+125.1
+Toronto(ON)
+5029.9
+Trois-Rivieres(QC)
+141.4
+Vancouver(BC)
+2136.2
+Victoria(BC)
+322.1
+Windsor(ON)
+319.9
+Winnipeg(MB)
+685.5
