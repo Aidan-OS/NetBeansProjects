@@ -120,12 +120,7 @@ public class PopLink {
                         beforeCurrentRecord = beforeCurrentRecord.getNextPopCity ();
                     }
                     
-                    PopCity afterCurrentRecord = top;
-                    
-                    for (int i = 0; i < cityNumber + 1; i++)
-                    {
-                        afterCurrentRecord = afterCurrentRecord.getNextPopCity ();
-                    }
+                    PopCity afterCurrentRecord = current.getNextPopCity();
                     
                     beforeCurrentRecord.setNextPopCity (afterCurrentRecord);
                 }
@@ -134,5 +129,58 @@ public class PopLink {
             cityNumber ++;
             current = current.getNextPopCity ();
         }while (current != null);
+    }
+    
+    public void sortListByPop ()
+    {
+        boolean switched = true;
+        PopCity previous = null;
+        PopCity current = null;
+        PopCity after = null;
+        
+        
+        while (switched)
+        {
+            current = top;
+            after = current.getNextPopCity ();
+            previous = null;
+            switched = false;
+            while (after != null)
+            {
+                double currentPop = current.getPopulation ();
+                double afterPop = after.getPopulation ();
+                
+                if (currentPop > afterPop && previous == null)
+                {
+                    current.setNextPopCity (after.getNextPopCity ());
+                    after.setNextPopCity (current);
+                    top = after;
+                    switched = true;
+                }
+                
+                else if (currentPop > afterPop)
+                {
+                    current.setNextPopCity (after.getNextPopCity ());
+                    after.setNextPopCity (current);
+                    previous.setNextPopCity (after);
+                    switched = true;
+                }
+                
+                if (previous == null)
+                {
+                    previous = top;
+                    current = previous.getNextPopCity ();
+                    after = current.getNextPopCity ();
+                }
+                
+                else if (previous.getNextPopCity () != null)
+                {
+                    previous = previous.getNextPopCity ();
+                    current = previous.getNextPopCity ();
+                    after = current.getNextPopCity ();
+                }
+                
+            }
+        }
     }
 }

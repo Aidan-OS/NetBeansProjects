@@ -44,6 +44,11 @@ public class UsePopCity {
         
         list.showList ();
         
+        list.sortListByPop ();
+        
+        System.out.println ("THIS IS THE SORTED LIST");
+        list.showList ();
+        
     }
     
 }
